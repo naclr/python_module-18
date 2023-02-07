@@ -28,7 +28,7 @@ class CryptoConverter:
        total_base = json.loads(r.content)[keys[base]]
 
        if amount[0]=='-':
-           print(amount[0])
+           #print(amount[0])
            raise APIException(f'Не удалось обработать количество {amount}.Введите значение больше 0')
        elif not re.match('^[0-9,.]+$', amount):
             raise APIException(f'Не удалось обработать количество {amount}. Введите число состоящее из цифр')
